@@ -60,6 +60,7 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
         
         .card:hover {
@@ -270,6 +271,67 @@
             margin-bottom: 0.5rem;
             text-align: center;
         }
+        
+        /* Modal window styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        .close-button:hover {
+            color: var(--secondary);
+        }
+
+        .modal-description p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .modal-description .en {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .modal-description a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .modal-description a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -328,7 +390,7 @@
                         <div>
                             <h3 class="text-3xl font-bold mb-6 playfair gradient-text">知識產權(IP)包括 <span class="en text-base">IP Includes</span></h3>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div class="card bg-white p-6 rounded-xl shadow-lg">
+                                <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('copyright')">
                                     <div class="flex items-start mb-4">
                                         <div class="icon-box mr-4">
                                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +404,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="card bg-white p-6 rounded-xl shadow-lg">
+                                <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('trademark')">
                                     <div class="flex items-start mb-4">
                                         <div class="icon-box mr-4">
                                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -356,7 +418,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="card bg-white p-6 rounded-xl shadow-lg">
+                                <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('patent')">
                                     <div class="flex items-start mb-4">
                                         <div class="icon-box mr-4">
                                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -370,16 +432,16 @@
                                     </div>
                                 </div>
                                 
-                                <div class="card bg-white p-6 rounded-xl shadow-lg">
+                                <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('design')">
                                     <div class="flex items-start mb-4">
                                         <div class="icon-box mr-4">
                                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6ak2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                             </svg>
                                         </div>
                                         <div>
-                                            <h4 class="text-xl font-semibold mb-1">設計專利</h4>
-                                            <p class="en text-sm">Design Patent</p>
+                                            <h4 class="text-xl font-semibold mb-1">註冊外觀</h4>
+                                            <p class="en text-sm">Registered Design</p>
                                         </div>
                                     </div>
                                 </div>
@@ -396,56 +458,8 @@
                         <div>
                             <h3 class="text-3xl font-bold mb-6 playfair gradient-text">IP的商業例子 <span class="en text-base">Commercial Examples</span></h3>
                             <div class="bg-white p-8 rounded-xl shadow-lg">
-                                <div class="space-y-6">
-                                    <div class="card border-l-4 border-transparent pl-4 py-2">
-                                        <h4 class="text-2xl font-semibold mb-2 flex items-center">
-                                            <span class="text-3xl mr-3 gradient-text">🌍</span>
-                                            全球巡演 <span class="en text-sm">  Global Tours</span>
-                                        </h4>
-                                        <p class="text-gray-600 text-lg">
-                                            授權擴大國際觀眾<br>
-                                            <span class="en text-sm">Licensing expands international audience</span>
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card border-l-4 border-transparent pl-4 py-2">
-                                        <h4 class="text-2xl font-semibold mb-2 flex items-center">
-                                            <span class="text-3xl mr-3 gradient-text">🎬</span>
-                                            媒體改編 <span class="en text-sm">  Media Adaptation</span>
-                                        </h4>
-                                        <p class="text-gray-600 text-lg">
-                                            跨媒體拓展市場<br>
-                                            <span class="en text-sm">Cross-media market expansion</span>
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card border-l-4 border-transparent pl-4 py-2">
-                                        <h4 class="text-2xl font-semibold mb-2 flex items-center">
-                                            <span class="text-3xl mr-3 gradient-text">🛍️</span>
-                                            商品授權 <span class="en text-sm">  Merchandise</span>
-                                        </h4>
-                                        <p class="text-gray-600 text-lg">
-                                            周邊產品創造收入<br>
-                                            <span class="en text-sm">Products generate additional revenue</span>
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card border-l-4 border-transparent pl-4 py-2">
-                                        <h4 class="text-2xl font-semibold mb-2 flex items-center">
-                                            <span class="text-3xl mr-3 gradient-text">🎵</span>
-                                            音樂授權 <span class="en text-sm">  Music Licensing</span>
-                                        </h4>
-                                        <p class="text-gray-600 text-lg">
-                                            跨平台音樂使用<br>
-                                            <span class="en text-sm">Cross-platform music usage</span>
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="card border-l-4 border-transparent pl-4 py-2">
-                                        <p class="text-gray-600 text-lg">
-                                            等等 <span class="en text-sm">etc.</span>
-                                        </p>
-                                    </div>
+                                <div class="w-full h-auto">
+                                    <iframe class="w-full" style="aspect-ratio: 2 / 3;" src="https://www.canva.com/design/DAGpdQteBjU/oi__Dy4iyRsBcKvtMDfkPA/view?embed" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -455,7 +469,7 @@
                 <section id="section-potential" class="section hidden">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bg-white p-8 rounded-xl shadow-lg">
-                            <h3 class="text-3xl font-bold mb-6 playfair gradient-text">成功的IP <span class="en text-base">A Successful IP</span></h3>
+                            <h3 class="text-3xl font-bold mb-6 playfair gradient-text">成功的IP <span class="en text-base">Key Aspects of a Successful IP</span></h3>
                             <div class="space-y-8">
                                 <div class="flex">
                                     <div class="icon-box mr-6 mt-1">
@@ -464,7 +478,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="text-2xl font-semibold mb-2">廣泛認可 <span class="en text-sm">Recognition</span></h4>
+                                        <h4 class="text-2xl font-semibold mb-2">獲得廣泛認可 <span class="en text-sm">Recognition</span></h4>
                                         <ul class="list-disc pl-5 text-gray-600 space-y-2 text-lg">
                                             <li>
                                                 大眾熟知度<br>
@@ -490,7 +504,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="text-2xl font-semibold mb-2">經濟價值 <span class="en text-sm">Economic Value</span></h4>
+                                        <h4 class="text-2xl font-semibold mb-2">具經濟價值 <span class="en text-sm">Economic Value</span></h4>
                                         <ul class="list-disc pl-5 text-gray-600 space-y-2 text-lg">
                                             <li>
                                                 持續收入來源<br>
@@ -512,7 +526,7 @@
                         </div>
                         
                         <div class="bg-white p-8 rounded-xl shadow-lg">
-                            <h3 class="text-3xl font-bold mb-6 playfair gradient-text">擴展與影響力 <span class="en text-base">Expansion & Impact</span></h3>
+                            <h3 class="text-3xl font-bold mb-6 playfair gradient-text"></h3>
                             <div class="space-y-8">
                                 <div class="flex">
                                     <div class="icon-box mr-6 mt-1">
@@ -521,7 +535,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="text-2xl font-semibold mb-2">擴展潛力 <span class="en text-sm">Expansion Potential</span></h4>
+                                        <h4 class="text-2xl font-semibold mb-2">具擴展潛力 <span class="en text-sm">Expansion Potential</span></h4>
                                         <ul class="list-disc pl-5 text-gray-600 space-y-2 text-lg">
                                             <li>
                                                 跨媒體適應性<br>
@@ -547,7 +561,7 @@
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 class="text-2xl font-semibold mb-2">文化影響力 <span class="en text-sm">Cultural Impact</span></h4>
+                                        <h4 class="text-2xl font-semibold mb-2">具文化影響力 <span class="en text-sm">Cultural Impact</span></h4>
                                         <ul class="list-disc pl-5 text-gray-600 space-y-2 text-lg">
                                             <li>
                                                 流行文化現象<br>
@@ -573,6 +587,14 @@
         </main>
     </div>
     
+    <!-- Modal window -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideModal()">×</span>
+            <div id="modal-description" class="modal-description"></div>
+        </div>
+    </div>
+    
     <script>
         window.addEventListener('load', function() {
             setTimeout(() => {
@@ -582,22 +604,18 @@
         
         document.querySelectorAll('[role="tab"]').forEach(tab => {
             tab.addEventListener('click', () => {
-                // Remove active state from all tabs
                 document.querySelectorAll('[role="tab"]').forEach(t => {
                     t.classList.remove('active');
                     t.setAttribute('aria-selected', 'false');
                 });
-                // Add active state to clicked tab
                 tab.classList.add('active');
                 tab.setAttribute('aria-selected', 'true');
                 
-                // Hide all sections
                 document.querySelectorAll('.section').forEach(section => {
                     section.classList.add('hidden');
                     section.classList.remove('active');
                 });
                 
-                // Show the corresponding section
                 const sectionId = tab.getAttribute('aria-controls');
                 const activeSection = document.getElementById(sectionId);
                 if (activeSection) {
@@ -635,6 +653,55 @@
         };
         
         revealSections();
+        
+        // Modal window functionality
+        const modal = document.getElementById('modal');
+        const modalDescription = document.getElementById('modal-description');
+        const descriptions = {
+            copyright: {
+                zh: '版權是指保護文學、藝術、音樂、電影等創作作品的法律權利。版權持有人有權控制其作品的複製、發行、表演和展示。',
+                en: 'Copyright refers to the legal right to protect creative works such as literature, art, music, and films. The copyright holder has the right to control the reproduction, distribution, performance, and display of their work.',
+                source: 'https://www.ipd.gov.hk/tc/copyright/index.html'
+            },
+            trademark: {
+                zh: '商標是用於區別商品或服務來源的標誌，如文字、圖形、顏色等。商標持有人可以防止他人未經許可使用相同或相似的標誌。',
+                en: 'A trademark is a sign used to distinguish the source of goods or services, such as words, graphics, colors, etc. The trademark holder can prevent others from using the same or similar signs without permission.',
+                source: 'https://www.ipd.gov.hk/tc/trade-marks/index.html'
+            },
+            patent: {
+                zh: '專利是授予發明者對其發明的獨佔權利。專利持有人可以阻止他人製造、使用或銷售其發明。',
+                en: 'A patent is an exclusive right granted to an inventor for their invention. The patent holder can prevent others from making, using, or selling their invention.',
+                source: 'https://www.ipd.gov.hk/tc/patents/index.html'
+            },
+            design: {
+                zh: '註冊外觀設計保護產品的外觀，如形狀、圖案、顏色等設計。註冊外觀設計的擁有人可以防止他人製造或銷售類似設計的產品。',
+                en: 'A Registered designs protects the appearance of a product, such as its shape, pattern, color, etc. The registered design owners can prevent others from making or selling products with similar designs.',
+                source: 'https://www.ipd.gov.hk/tc/designs/index.html'
+            }
+        };
+
+        function showModal(id) {
+            const desc = descriptions[id];
+            if (desc) {
+                modalDescription.innerHTML = `
+                    <p>${desc.zh}</p>
+                    <p class="en">${desc.en}</p>
+                    <p>資料來源: <a href="${desc.source}" target="_blank">香港知識產權署</a></p>
+                `;
+                modal.classList.remove('hidden');
+            }
+        }
+
+        function hideModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
     </script>
 </body>
 </html>
