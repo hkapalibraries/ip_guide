@@ -1,0 +1,432 @@
+<html lang="zh-HK"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知識產權管理建議 | IP Management Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans', 'Noto Sans TC', sans-serif;
+            background-color: #f0f4f8;
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover .step-icon {
+            transform: scale(1.1);
+        }
+        
+        .expanded-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .step-card.active .expanded-content {
+            max-height: 200px;
+        }
+        
+        .progress-bar {
+            transition: width 0.5s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-cols-5 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .grid-cols-5 {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.ml-2{margin-left:0.5rem}.ml-3{margin-left:0.75rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.flex{display:flex}.grid{display:grid}.h-1{height:0.25rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.w-0{width:0px}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.max-w-7xl{max-width:80rem}.flex-grow{flex-grow:1}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-100{--tw-border-opacity:1;border-color:rgb(254 243 199 / var(--tw-border-opacity, 1))}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-green-100{--tw-border-opacity:1;border-color:rgb(220 252 231 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-lime-100{--tw-border-opacity:1;border-color:rgb(236 252 203 / var(--tw-border-opacity, 1))}.border-orange-100{--tw-border-opacity:1;border-color:rgb(255 237 213 / var(--tw-border-opacity, 1))}.border-pink-100{--tw-border-opacity:1;border-color:rgb(252 231 243 / var(--tw-border-opacity, 1))}.border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255 / var(--tw-border-opacity, 1))}.border-red-100{--tw-border-opacity:1;border-color:rgb(254 226 226 / var(--tw-border-opacity, 1))}.border-yellow-100{--tw-border-opacity:1;border-color:rgb(254 249 195 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-lime-100{--tw-bg-opacity:1;background-color:rgb(236 252 203 / var(--tw-bg-opacity, 1))}.bg-lime-50{--tw-bg-opacity:1;background-color:rgb(247 254 231 / var(--tw-bg-opacity, 1))}.bg-lime-600{--tw-bg-opacity:1;background-color:rgb(101 163 13 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-600{--tw-bg-opacity:1;background-color:rgb(234 88 12 / var(--tw-bg-opacity, 1))}.bg-pink-100{--tw-bg-opacity:1;background-color:rgb(252 231 243 / var(--tw-bg-opacity, 1))}.bg-pink-50{--tw-bg-opacity:1;background-color:rgb(253 242 248 / var(--tw-bg-opacity, 1))}.bg-pink-600{--tw-bg-opacity:1;background-color:rgb(219 39 119 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-600{--tw-bg-opacity:1;background-color:rgb(202 138 4 / var(--tw-bg-opacity, 1))}.bg-opacity-30{--tw-bg-opacity:0.3}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-indigo-700{--tw-gradient-to:#4338ca var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-lime-600{--tw-text-opacity:1;color:rgb(101 163 13 / var(--tw-text-opacity, 1))}.text-lime-700{--tw-text-opacity:1;color:rgb(77 124 15 / var(--tw-text-opacity, 1))}.text-lime-800{--tw-text-opacity:1;color:rgb(63 98 18 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-pink-600{--tw-text-opacity:1;color:rgb(219 39 119 / var(--tw-text-opacity, 1))}.text-pink-700{--tw-text-opacity:1;color:rgb(190 24 93 / var(--tw-text-opacity, 1))}.text-pink-800{--tw-text-opacity:1;color:rgb(157 23 77 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-600{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.text-yellow-700{--tw-text-opacity:1;color:rgb(161 98 7 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}}@media (min-width: 1024px){.lg\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}}</style></head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">知識產權管理建議</h1>
+                <h2 class="text-xl md:text-2xl font-medium opacity-90">IP Management Recommendations</h2>
+                <div class="mt-4 flex items-center">
+                    <div class="h-1 bg-white bg-opacity-30 rounded-full flex-grow">
+                        <div class="progress-bar h-1 bg-white rounded-full w-0"></div>
+                    </div>
+                    <span class="ml-3 text-sm font-medium progress-text">0/10 完成</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="p-6 bg-blue-50 border-b border-blue-100">
+                <p class="text-blue-800">點擊每個步驟了解更多詳情 | Click on each step to learn more details</p>
+            </div>
+            
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 p-6">
+                <!-- Step 1: Plan -->
+                <div class="step-card bg-blue-50 rounded-lg p-4 border border-blue-100" data-step="1">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
+                        <div class="step-icon bg-blue-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-800">計劃 Plan</h3>
+                    <div class="expanded-content mt-2 text-sm text-blue-700">
+                        <p class="mb-1">根據需要，製訂如何獲取、保護和使用知識產權資產的具體策略。</p>
+                        <p>Based on your needs, plan clearly on how to get, protect, and use intellectual property (IP) assets.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-blue-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Inventory -->
+                <div class="step-card bg-indigo-50 rounded-lg p-4 border border-indigo-100" data-step="2">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
+                        <div class="step-icon bg-indigo-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-indigo-800">盤點 Inventory</h3>
+                    <div class="expanded-content mt-2 text-sm text-indigo-700">
+                        <p class="mb-1">清楚你有哪些知識產權資產，以及它們的性質及潛在價值。</p>
+                        <p>Identify the IP assets you own, understand their nature, and assess their potential value.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-indigo-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Record -->
+                <div class="step-card bg-purple-50 rounded-lg p-4 border border-purple-100" data-step="3">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
+                        <div class="step-icon bg-purple-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-purple-800">記錄 Record</h3>
+                    <div class="expanded-content mt-2 text-sm text-purple-700">
+                        <p class="mb-1">把知識產權資產的資料整理及清楚記下，並及時註冊保護。</p>
+                        <p>Organize and document all IP information and register them promptly for protection.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-purple-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 4: Invest -->
+                <div class="step-card bg-pink-50 rounded-lg p-4 border border-pink-100" data-step="4">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-pink-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
+                        <div class="step-icon bg-pink-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-pink-800">投資 Invest</h3>
+                    <div class="expanded-content mt-2 text-sm text-pink-700">
+                        <p class="mb-1">投資足夠的金錢和人手資源去管理及維護知識產權。</p>
+                        <p>Allocate sufficient money and manpower to manage and maintain your IP.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-pink-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 5: Monitor -->
+                <div class="step-card bg-red-50 rounded-lg p-4 border border-red-100" data-step="5">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">5</div>
+                        <div class="step-icon bg-red-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-red-800">檢視 Monitor</h3>
+                    <div class="expanded-content mt-2 text-sm text-red-700">
+                        <p class="mb-1">定期檢視知識產權的狀態，以評估潛在問題及風險。</p>
+                        <p>Regularly review the status of your IP to identify potential issues and risks.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-red-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 6: Follow -->
+                <div class="step-card bg-orange-50 rounded-lg p-4 border border-orange-100" data-step="6">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">6</div>
+                        <div class="step-icon bg-orange-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-orange-800">跟隨 Follow</h3>
+                    <div class="expanded-content mt-2 text-sm text-orange-700">
+                        <p class="mb-1">遵守知識產權的規矩，保護好知識產權資產。</p>
+                        <p>Strictly follow the IP regulations to protect your IP assets.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-orange-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 7: Safeguard -->
+                <div class="step-card bg-amber-50 rounded-lg p-4 border border-amber-100" data-step="7">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">7</div>
+                        <div class="step-icon bg-amber-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-amber-800">防護 Safeguard</h3>
+                    <div class="expanded-content mt-2 text-sm text-amber-700">
+                        <p class="mb-1">警惕任何對你的知識產權資產的侵權行為或未經授權的使用，發現就馬上處理。</p>
+                        <p>Watch for any infringement or unauthorised use of your IP and deal with it immediately.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-amber-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 8: Protect -->
+                <div class="step-card bg-yellow-50 rounded-lg p-4 border border-yellow-100" data-step="8">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">8</div>
+                        <div class="step-icon bg-yellow-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-yellow-800">保障 Protect</h3>
+                    <div class="expanded-content mt-2 text-sm text-yellow-700">
+                        <p class="mb-1">適當時須通過談判或法律訴訟保護知識產權，免受侵犯。</p>
+                        <p>When necessary, protect your IP through negotiation or lawsuits.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-yellow-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 9: Profit -->
+                <div class="step-card bg-lime-50 rounded-lg p-4 border border-lime-100" data-step="9">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-lime-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">9</div>
+                        <div class="step-icon bg-lime-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-lime-800">利潤 Profit</h3>
+                    <div class="expanded-content mt-2 text-sm text-lime-700">
+                        <p class="mb-1">商業化知識產權資產，比如授權、合夥等商業安排。</p>
+                        <p>Commercialise your IP through licensing, partnerships, or other business arrangements.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-lime-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Step 10: Verify -->
+                <div class="step-card bg-green-50 rounded-lg p-4 border border-green-100" data-step="10">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="step-number bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">10</div>
+                        <div class="step-icon bg-green-100 rounded-full p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-green-800">驗證 Verify</h3>
+                    <div class="expanded-content mt-2 text-sm text-green-700">
+                        <p class="mb-1">交易前，仔細調查其知識產權有沒有問題，確保安全。</p>
+                        <p>Before any transaction, carefully verify the IP to ensure it is free of risks.</p>
+                    </div>
+                    <div class="mt-2 flex justify-end">
+                        <button class="toggle-btn text-green-600 text-sm font-medium focus:outline-none">
+                            了解更多 ↓
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="p-6 bg-gray-50 border-t border-gray-100">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-600">參考資料 | Reference:</p>
+                        <p class="text-gray-800 font-medium">知識產權管理人員實務指南</p>
+                    </div>
+                    <a href="https://www.ipd.gov.hk/tc/tools-resources/publications/leaflets-and-booklets/index.html" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center">
+                        <span>查看更多資源</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Reset Button -->
+            <div class="p-4 bg-gray-100 border-t border-gray-200 flex justify-center">
+                <button id="reset-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    <span>重設 | Reset</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stepCards = document.querySelectorAll('.step-card');
+            const toggleBtns = document.querySelectorAll('.toggle-btn');
+            const progressBar = document.querySelector('.progress-bar');
+            const progressText = document.querySelector('.progress-text');
+            const resetBtn = document.getElementById('reset-btn');
+            
+            let completedSteps = 0;
+            let totalSteps = stepCards.length;
+            
+            // Initialize from localStorage if available
+            if (localStorage.getItem('ipManagementCompletedSteps')) {
+                const savedCompletedSteps = parseInt(localStorage.getItem('ipManagementCompletedSteps'));
+                completedSteps = savedCompletedSteps;
+                updateProgress();
+                
+                // Mark saved steps as completed
+                const savedSteps = JSON.parse(localStorage.getItem('ipManagementSteps') || '[]');
+                savedSteps.forEach(stepNum => {
+                    const stepCard = document.querySelector(`.step-card[data-step="${stepNum}"]`);
+                    if (stepCard) {
+                        stepCard.classList.add('active');
+                        stepCard.classList.add('border-2');
+                        const toggleBtn = stepCard.querySelector('.toggle-btn');
+                        toggleBtn.textContent = '收起 ↑';
+                    }
+                });
+            }
+            
+            // Toggle step details
+            toggleBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const card = this.closest('.step-card');
+                    toggleStep(card);
+                });
+            });
+            
+            // Click on card to toggle
+            stepCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    toggleStep(this);
+                });
+            });
+            
+            // Reset button
+            resetBtn.addEventListener('click', function() {
+                stepCards.forEach(card => {
+                    card.classList.remove('active', 'border-2');
+                    const toggleBtn = card.querySelector('.toggle-btn');
+                    toggleBtn.textContent = '了解更多 ↓';
+                });
+                completedSteps = 0;
+                updateProgress();
+                localStorage.removeItem('ipManagementCompletedSteps');
+                localStorage.removeItem('ipManagementSteps');
+            });
+            
+            function toggleStep(card) {
+                const isActive = card.classList.contains('active');
+                const stepNumber = parseInt(card.getAttribute('data-step'));
+                const toggleBtn = card.querySelector('.toggle-btn');
+                
+                if (isActive) {
+                    card.classList.remove('active');
+                    card.classList.remove('border-2');
+                    toggleBtn.textContent = '了解更多 ↓';
+                    completedSteps--;
+                    
+                    // Remove from saved steps
+                    let savedSteps = JSON.parse(localStorage.getItem('ipManagementSteps') || '[]');
+                    savedSteps = savedSteps.filter(step => step !== stepNumber);
+                    localStorage.setItem('ipManagementSteps', JSON.stringify(savedSteps));
+                } else {
+                    card.classList.add('active');
+                    card.classList.add('border-2');
+                    toggleBtn.textContent = '收起 ↑';
+                    completedSteps++;
+                    
+                    // Add to saved steps
+                    let savedSteps = JSON.parse(localStorage.getItem('ipManagementSteps') || '[]');
+                    if (!savedSteps.includes(stepNumber)) {
+                        savedSteps.push(stepNumber);
+                    }
+                    localStorage.setItem('ipManagementSteps', JSON.stringify(savedSteps));
+                }
+                
+                updateProgress();
+            }
+            
+            function updateProgress() {
+                const percentage = (completedSteps / totalSteps) * 100;
+                progressBar.style.width = `${percentage}%`;
+                progressText.textContent = `${completedSteps}/${totalSteps} 完成`;
+                localStorage.setItem('ipManagementCompletedSteps', completedSteps);
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94efd5a876280468',t:'MTc0OTc5OTMyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+</body></html>
