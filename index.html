@@ -332,6 +332,26 @@
         .modal-description a:hover {
             text-decoration: underline;
         }
+
+        /* Iframe styles for IP Management section */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* Adjust based on content's aspect ratio */
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -381,6 +401,9 @@
                         </button>
                         <button id="tab-potential" class="tab px-8 py-3 text-lg font-medium rounded-full" role="tab" aria-controls="section-potential" aria-selected="false">
                             IP的潛力 <span class="en text-sm ml-1">Potentials of IP</span>
+                        </button>
+                        <button id="tab-management" class="tab px-8 py-3 text-lg font-medium rounded-full" role="tab" aria-controls="section-management" aria-selected="false">
+                            創作與管理 <span class="en text-sm ml-1">Management</span>
                         </button>
                     </div>
                 </div>
@@ -530,7 +553,7 @@
                             <div class="space-y-8">
                                 <div class="flex">
                                     <div class="icon-box mr-6 mt-1">
-                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24  Together with24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5"></path>
                                         </svg>
                                     </div>
@@ -582,6 +605,14 @@
                             </div>
                         </div>
                     </div>
+                </section>
+                
+                <section id="section-management" class="section hidden">
+                    
+                    <div class="iframe-container">
+                        <iframe src="https://hkapalibraries.github.io/ip_guide/ip_manage.html" title="IP Management Recommendations" aria-label="IP Management Recommendations"></iframe>
+                    </div>
+                    <p class="mt-4 text-center text-gray-600">無法載入內容？請直接訪問 <a href="https://hkapalibraries.github.io/ip_guide/ip_manage.html" target="_blank" class="text-blue-600 hover:text-blue-800">IP管理建議</a>。</p>
                 </section>
             </div>
         </main>
