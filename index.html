@@ -409,62 +409,71 @@
                     <div class="max-w-5xl mx-auto">
                         <div class="grid gap-8">
                             <div>
-                                <h3 class="text-3xl font-bold mb-6 playfair gradient-text">知識產權(IP)包括 <span class="en text-base">IP Includes</span></h3>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('copyright')">
-                                        <div class="flex items-start mb-4">
-                                            <div class="icon-box mr-4">
-                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
-                                                </svg>
+                                <div class="w-2/3 mx-auto">
+                                    <h3 class="text-3xl font-bold mb-6 playfair gradient-text">知識產權(IP)包括 <span class="en text-base">IP Includes</span></h3>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('copyright')">
+                                            <div class="flex items-start mb-4">
+                                                <div class="icon-box mr-4">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-1">版權</h4>
+                                                    <p class="en text-sm">Copyright</p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h4 class="text-xl font-semibold mb-1">版權</h4>
-                                                <p class="en text-sm">Copyright</p>
+                                        </div>
+                                        
+                                        <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('trademark')">
+                                            <div class="flex items-start mb-4">
+                                                <div class="icon-box mr-4">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-1">商標</h4>
+                                                    <p class="en text-sm">Trademark</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('patent')">
+                                            <div class="flex items-start mb-4">
+                                                <div class="icon-box mr-4">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-1">專利</h4>
+                                                    <p class="en text-sm">Patent</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('design')">
+                                            <div class="flex items-start mb-4">
+                                                <div class="icon-box mr-4">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6ak2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-xl font-semibold mb-1">註冊外觀</h4>
+                                                    <p class="en text-sm">Registered Design</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('trademark')">
-                                        <div class="flex items-start mb-4">
-                                            <div class="icon-box mr-4">
-                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-xl font-semibold mb-1">商標</h4>
-                                                <p class="en text-sm">Trademark</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('patent')">
-                                        <div class="flex items-start mb-4">
-                                            <div class="icon-box mr-4">
-                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-xl font-semibold mb-1">專利</h4>
-                                                <p class="en text-sm">Patent</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="card bg-white p-6 rounded-xl shadow-lg" onclick="showModal('design')">
-                                        <div class="flex items-start mb-4">
-                                            <div class="icon-box mr-4">
-                                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6ak2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                                </svg>
-                                            </div>
-                                            <div>
-                                                <h4 class="text-xl font-semibold mb-1">註冊外觀</h4>
-                                                <p class="en text-sm">Registered Design</p>
-                                            </div>
-                                        </div>
+                                </div>
+                                
+                                <div class="mt-8 w-2/3 mx-auto">
+                                    <h4 class="text-3xl font-bold mb-6 playfair gradient-text">IP新機遇 <span class="en text-base">RTHK Programme</span></h4>
+                                    <div class="video-container">
+                                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLuwJy35eAVaLfLCIumaY7U_sSrYrUZESd" title="知識產權介紹" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
 
@@ -476,13 +485,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="mt-8">
-                                    <h4 class="text-3xl font-bold mb-6 playfair gradient-text">IP新機遇 <span class="en text-base">RTHK Programme</span></h4>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLuwJy35eAVaLfLCIumaY7U_sSrYrUZESd" title="知識產權介紹" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -583,7 +586,7 @@
                 source: 'https://www.ipd.gov.hk/tc/patents/index.html'
             },
             design: {
-                zh: '註冊外觀設計保護產品的外觀，如形狀、圖案、顏色等設計。註冊外觀設計的擁有人可以防止他人製造或銷售類似設計的產品。',
+                zh: '註冊外觀設計保護產品の外觀，如形狀、圖案、顏色等設計。註冊外觀設計的擁有人可以防止他人製造或銷售類似設計的產品。',
                 en: 'A Registered designs protects the appearance of a product, such as its shape, pattern, color, etc. The registered design owners can prevent others from making or selling products with similar designs.',
                 source: 'https://www.ipd.gov.hk/tc/designs/index.html'
             }
